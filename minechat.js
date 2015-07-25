@@ -8,10 +8,10 @@ var rl = readline.createInterface({
 });
 
 function print_help() {
-	console.log("usage: PASSWORD=<password> node minechat.js <hostname>[:port] <user>");
+	console.log("usage: [PASSWORD=<password>] node minechat.js <hostname>[:port] <user>");
 }
 
-if (process.argv.length < 4 || !("PASSWORD" in process.env)) {
+if (process.argv.length < 4) {
 	console.log("Too few arguments!");
 	print_help();
 	process.exit(1);
@@ -36,6 +36,11 @@ if (host.indexOf(':') != -1) {
 
 console.log("connecting to " + host + ":" + port);
 console.log("user: " + user);
+if (passwd) {
+	console.log("using provided password");
+} else {
+	console.log("no password provided");
+}
 
 var bot = mineflayer.createBot({
 	host: host,
