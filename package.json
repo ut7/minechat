@@ -3,12 +3,14 @@
 	"version": "0.1.0",
 	"description": "Command-line Minecraft chat client",
 	"main": "minechat.js",
+	"engines": { "node": ">=0.8" },
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/llbit/minechat.git"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"mineflayer": ">=0.1.0"
+		"mineflayer": ">=0.1.0",
+		"ansicolors": "0.3.2"
 	}
 }
