@@ -88,6 +88,28 @@ bot.once('game', function () {
 	rl.prompt();
 });
 
+function onServerEnd(reason) {
+	process.stdout.write('\nConnection closed.\n');
+	if (reason) {
+		process.stdout.write(reason + '\n');
+	}
+	process.exit(0);
+}
+
+bot.on('kicked', function(reason) {
+	onServerEnd(renderMessage(JSON.parse(reason)));
+});
+
+bot.on('error', function(err) {
+	onServerEnd(String(err));
+});
+
+// `end` is emitted before `kicked`! We wait a bit, in case a kick is coming right
+// after that. If one doesn't, we'll exit anyway.
+bot.on('end', function(reason) {
+	setTimeout(onServerEnd.bind(null, reason), 100);
+});
+
 // This function erases the current readline "entry area" from the screen,
 // so that it can be overwritten with output. Works even if the current
 // "line" spans several terminal rows.
