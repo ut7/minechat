@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var readline = require('readline');
 var mineflayer = require('mineflayer');
 var ansicolors = require('ansicolors');

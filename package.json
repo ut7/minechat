@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"description": "Command-line Minecraft chat client",
 	"main": "minechat.js",
+	"bin": "minechat.js",
 	"engines": { "node": ">=0.8" },
 	"repository": {
 		"type": "git",
