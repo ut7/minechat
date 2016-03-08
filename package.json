@@ -11,7 +11,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"mineflayer": ">=0.1.0",
+		"mineflayer": "^2.1.1",
 		"ansicolors": "0.3.2"
 	}
 }
