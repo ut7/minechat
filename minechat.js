@@ -157,8 +157,7 @@ function renderMessage(message) {
 	if (message.translate) {
 		var args = message.with || [];
 		// FIXME we should have a table of translations
-		return colorizers.red(message.translate +
-							  '(' + args.map(renderMessage).join(',') + ')');
+		return colorizers.red(message.translate + '(' + args.map(renderMessage).join(',') + ')');
 	}
 	var colorizer = colorizers[message.color] || function(t) { return t };
 	var extras = message.extra ? message.extra.map(renderMessage).join('') : '';
