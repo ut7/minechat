@@ -41,30 +41,29 @@ process.argv.forEach(function(val, index, array) {
 	}
 });
 
+var options = {
+	username: process.argv[3],
+	password: process.env.PASSWORD,
+};
+
 var host = process.argv[2];
-var port = 25565;
-var user = process.argv[3];
-var passwd = process.env.PASSWORD;
 
 if (host.indexOf(':') != -1) {
-	port = host.substring(host.indexOf(':')+1);
-	host = host.substring(0, host.indexOf(':'));
+	options.host = host.substring(0, host.indexOf(':'));
+	options.port = host.substring(host.indexOf(':')+1);
+} else {
+	options.host = host;
 }
 
-console.log("connecting to " + host + ":" + port);
-console.log("user: " + user);
-if (passwd) {
+console.log("connecting to " + host);
+console.log("user: " + options.username);
+if (options.password) {
 	console.log("using provided password");
 } else {
 	console.log("no password provided");
 }
 
-var bot = mineflayer.createBot({
-	host: host,
-	port: port,
-	username: user,
-	password: passwd
-});
+var bot = mineflayer.createBot(options);
 
 bot.once('game', function () {
 	var rl = readline.createInterface({
