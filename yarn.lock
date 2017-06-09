@@ -25,13 +25,9 @@ asn1@0.2.3, asn1@~0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.3.tgz#dac8787713c9966849fc8180777ebe9c1ddf3b86"
 
-assert-plus@1.0.0, assert-plus@^1.0.0:
+assert-plus@1.0.0, assert-plus@^0.2.0, assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
-
-assert-plus@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -305,9 +301,9 @@ mime-types@^2.1.12, mime-types@~2.1.7:
   dependencies:
     mime-db "~1.27.0"
 
-minecraft-data@^2.15.0, minecraft-data@^2.16.0, minecraft-data@^2.7.0:
+minecraft-data@^2.15.0, minecraft-data@^2.7.0, "minecraft-data@https://github.com/jonathanperret/node-minecraft-data#mc-1.12":
   version "2.16.0"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-2.16.0.tgz#8aaef392c648f4b8bfb4750955d335e458a33140"
+  resolved "https://github.com/jonathanperret/node-minecraft-data#029dfad7bcfff8126f7c3a40abd25f2677797482"
 
 minecraft-protocol@^1.1.0, minecraft-protocol@^1.2.0:
   version "1.2.0"
