@@ -16,6 +16,7 @@
 	"dependencies": {
 		"ansicolors": "0.3.2",
 		"minecraft-data": "https://github.com/jonathanperret/node-minecraft-data#mc-1.12",
+		"prismarine-chunk": "https://github.com/jonathanperret/prismarine-chunk#mc-1.12",
 		"minecraft-protocol": "^1.2.0",
 		"mineflayer": "^2.2.0"
 	},
