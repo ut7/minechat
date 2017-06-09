@@ -42,7 +42,6 @@ process.argv.forEach(function(val, index, array) {
 });
 
 var options = {
-	version: '1.12',
 	username: process.argv[3],
 	password: process.env.PASSWORD,
 };
