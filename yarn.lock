@@ -25,9 +25,13 @@ asn1@0.2.3, asn1@~0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.3.tgz#dac8787713c9966849fc8180777ebe9c1ddf3b86"
 
-assert-plus@1.0.0, assert-plus@^0.2.0, assert-plus@^1.0.0:
+assert-plus@1.0.0, assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
+
+assert-plus@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -301,20 +305,20 @@ mime-types@^2.1.12, mime-types@~2.1.7:
   dependencies:
     mime-db "~1.27.0"
 
-minecraft-data@^2.15.0, minecraft-data@^2.7.0, "minecraft-data@https://github.com/jonathanperret/node-minecraft-data#mc-1.12":
-  version "2.16.0"
-  resolved "https://github.com/jonathanperret/node-minecraft-data#029dfad7bcfff8126f7c3a40abd25f2677797482"
+minecraft-data@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-2.17.0.tgz#6d2ad0caf9dd613b25342c0f6156827b7d51f96d"
 
-minecraft-protocol@^1.1.0, minecraft-protocol@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/minecraft-protocol/-/minecraft-protocol-1.2.0.tgz#97550a3539f5173cdec9c0ba9e14eadbd1713e4e"
+minecraft-protocol@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/minecraft-protocol/-/minecraft-protocol-1.3.0.tgz#ee0c6b8f0d57b18e9cfd19c7ed2d772be95dd85b"
   dependencies:
     buffer-equal "^1.0.0"
     debug "^2.2.0"
     endian-toggle "^0.0.0"
     lodash.get "^4.1.2"
     lodash.merge "^4.3.0"
-    minecraft-data "^2.15.0"
+    minecraft-data "^2.17.0"
     prismarine-nbt "^1.0.0"
     protodef "^1.5.1"
     readable-stream "^2.0.5"
@@ -324,16 +328,16 @@ minecraft-protocol@^1.1.0, minecraft-protocol@^1.2.0:
   optionalDependencies:
     ursa "^0.9.1"
 
-mineflayer@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/mineflayer/-/mineflayer-2.2.0.tgz#7f6bf82bcd3eaf6ead8c0f391c8a5bfe936fbf90"
+mineflayer@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/mineflayer/-/mineflayer-2.3.0.tgz#72d46b7b9a32d9794bb0777b95b24b4af05d3d9b"
   dependencies:
-    minecraft-data "^2.7.0"
-    minecraft-protocol "^1.1.0"
+    minecraft-data "^2.17.0"
+    minecraft-protocol "^1.3.0"
     mojangson "^0.2.1"
     prismarine-biome "^1.0.1"
     prismarine-block "^1.0.1"
-    prismarine-chunk "^1.6.0"
+    prismarine-chunk "^1.7.0"
     prismarine-entity "^0.2.0"
     prismarine-item "^1.0.1"
     prismarine-recipe "^1.0.1"
@@ -388,9 +392,9 @@ prismarine-block@^1.0.0, prismarine-block@^1.0.1:
   dependencies:
     prismarine-biome "^1.0.0"
 
-prismarine-chunk@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/prismarine-chunk/-/prismarine-chunk-1.6.0.tgz#522d930263f2a73f8ea39c44b99204530d5b259a"
+prismarine-chunk@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/prismarine-chunk/-/prismarine-chunk-1.7.0.tgz#256e6b931fe8b00aeaac61c62fbc45380de35d5b"
   dependencies:
     prismarine-block "^1.0.0"
     protodef "^1.3.1"
