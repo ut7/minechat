@@ -65,11 +65,25 @@ if (options.password) {
 
 var bot = mineflayer.createBot(options);
 
+function tabCompleter(linePartial, done) {
+	bot._client.write('tab_complete', {
+		text: linePartial,
+		assumeCommand: false,
+	});
+
+	// Minecraft's suggestions only include the last space-separated word
+	const completed = linePartial.replace(/.* /, '');
+	bot._client.once('tab_complete', function(tabResponse) {
+		done(null, [tabResponse.matches, completed]);
+	});
+}
+
 bot.once('game', function () {
 	var rl = readline.createInterface({
 		input: process.stdin,
 		output: process.stdout,
-		terminal: process.stdout.isTTY
+		terminal: process.stdout.isTTY,
+		completer: tabCompleter
 	});
 
 	rl.on('line', function(line) {
