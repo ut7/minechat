@@ -175,7 +175,10 @@ function renderMessage(message) {
 	var colorizer = colorizers[message.color] || function(t) { return t };
 	var extras = message.extra ? message.extra.map(renderMessage).join('') : '';
 	var text = message.text + extras;
-	if (message.clickEvent && message.clickEvent.action === 'open_url') {
+	if (message.clickEvent && message.clickEvent.action === 'open_url'
+		// work around Spigot's overeager hyperlink insertion
+		&& message.clickEvent.value !== 'http://' + text
+	   ) {
 		text = '[' + text + '](' + message.clickEvent.value + ')';
 	}
 	return colorizer(text);
